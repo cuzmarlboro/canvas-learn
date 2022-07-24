@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas绘制线条</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 10px auto 0;
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- canvas 宽高默认 300*150 -->
+    <canvas id="canvas" width="600" height="500">您的浏览器当前不支持 canvas</canvas>
+</body>
+<script>
+    const canvas = document.getElementById('canvas')
+    const ctx = canvas.getContext('2d') // 获取2d绘图环境
+
+    // x轴正方向是起点向左，y轴正方向是起点向下
+
+    ctx.beginPath(); // 开始绘制路径
+    ctx.lineWidth = 4 // 线条粗细
+    ctx.strokeStyle = 'orange' // 线条颜色
+    ctx.moveTo(100, 100); // 起点
+    ctx.lineTo(300, 300); // 终点
+    ctx.stroke() // 绘制api
+    ctx.closePath(); // 结束绘制路径
+
+
+
+
+</script>
+
+</html>
